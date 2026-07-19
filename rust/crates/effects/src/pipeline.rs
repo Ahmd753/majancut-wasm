@@ -84,6 +84,17 @@ impl EffectPipeline {
                     label: Some("effects-fullscreen-shader"),
                     source: wgpu::ShaderSource::Wgsl(FULLSCREEN_SHADER_SOURCE.into()),
                 });
+        let pipeline_layout =
+            context
+                .device()
+                .create_pipeline_layout(&wgpu::PipelineLayoutDescriptor {
+                    label: Some("effects-pipeline-layout"),
+                    bind_group_layouts: &[
+                        Some(context.texture_sampler_bind_group_layout()),
+                        Some(&uniform_bind_group_layout),
+                    ],
+                    immediate_size: 0,
+                });
         let shader_list: [(&str, &str); 4] = [
             (GAUSSIAN_BLUR_SHADER_ID, GAUSSIAN_BLUR_SHADER_SOURCE),
             (MAJAN_GLITCH_SHADER_ID, MAJAN_GLITCH_SHADER_SOURCE),
