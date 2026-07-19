@@ -29,8 +29,8 @@ fn fragment_main(input: VertexOutput) -> @location(0) vec4f {
     let band = floor(uv.y * slices);
     let r1 = hash(band + floor(seed) * 7.13);
     let r2 = hash(band * 1.7 + floor(seed) * 3.1 + 5.0);
-    let active = step(0.65, r1);
-    uv.x = uv.x + (r2 - 0.5) * 2.0 * amount * 0.25 * active;
+    let slice_on = step(0.65, r1);
+    uv.x = uv.x + (r2 - 0.5) * 2.0 * amount * 0.25 * slice_on;
 
     // rgb channel split
     let shift = (rgb_shift / uniforms.resolution.x) * (0.5 + 0.5 * hash(floor(seed) + 42.0));
