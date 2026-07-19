@@ -3,6 +3,8 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+permissions:
+  contents: write
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,9 +16,22 @@ jobs:
       - name: Install wasm-pack
         run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
       - name: Build
-        run: cd rust/wasm && wasm-pack build --release --target bundler
-      - uses: actions/upload-artifact@v4
-        with:
-          name: opencut-wasm-pkg
-          path: rust/wasm/pkg
-          retention-days: 30
+        id: build
+        continue-on-error: true
+        run: |
+          cd rust/wasm
+          wasm-pack build --release --target bundler 2>&1 | tee /tmp/build.log
+          echo "code=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
+      - name: Publish output to repo
+        run: |
+          mkdir -p dist
+          cp /tmp/build.log dist/build.log || true
+          if [ -d rust/wasm/pkg ]; then rm -rf dist/pkg && cp -r rust/wasm/pkg dist/pkg; fi
+          git config user.name "majan-ci"
+          git config user.email "ci@majan.local"
+          git pull --rebase || true
+          git add -A dist
+          git commit -m "ci: build output (code=${{ steps.build.outputs.code }})" || echo "nothing to commit"
+          git push
+      - name: Report status
+        run: exit ${{ steps.build.outputs.code }}
