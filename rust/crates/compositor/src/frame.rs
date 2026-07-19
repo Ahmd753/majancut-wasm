@@ -23,6 +23,7 @@ pub struct CanvasClearDescriptor {
 #[serde(tag = "type", rename_all = "camelCase")]
 pub enum FrameItemDescriptor {
     Layer(LayerDescriptor),
+    #[serde(rename_all = "camelCase")]
     SceneEffect {
         effect_pass_groups: Vec<Vec<EffectPassDescriptor>>,
     },
