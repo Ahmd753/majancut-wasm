@@ -26,11 +26,11 @@ jobs:
         run: |
           mkdir -p dist
           cp /tmp/build.log dist/build.log || true
-          if [ -d rust/wasm/pkg ]; then rm -rf dist/pkg && cp -r rust/wasm/pkg dist/pkg; fi
+          if [ -d rust/wasm/pkg ]; then rm -rf dist/pkg && cp -r rust/wasm/pkg dist/pkg && rm -f dist/pkg/.gitignore; fi
           git config user.name "majan-ci"
           git config user.email "ci@majan.local"
           git pull --rebase || true
-          git add -A dist
+          git add -Af dist
           git commit -m "ci: build output (code=${{ steps.build.outputs.code }})" || echo "nothing to commit"
           git push
       - name: Report status
