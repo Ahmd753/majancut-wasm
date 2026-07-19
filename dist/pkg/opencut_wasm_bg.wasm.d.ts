@@ -2,6 +2,7 @@
 /* eslint-disable */
 export const memory: WebAssembly.Memory;
 export const initializeGpu: () => any;
+export const applyMaskFeather: (a: any) => [number, number, number];
 export const applyEffectPasses: (a: any) => [number, number, number];
 export const getCompositorCanvas: () => [number, number, number];
 export const initCompositor: (a: number, b: number) => [number, number];
@@ -10,7 +11,6 @@ export const renderFrame: (a: any) => [number, number];
 export const resizeCompositor: (a: number, b: number) => [number, number];
 export const uploadTexture: (a: any) => [number, number];
 export const getLastFrameProfile: () => any;
-export const applyMaskFeather: (a: any) => [number, number, number];
 export const TICKS_PER_SECOND: () => number;
 export const floorToFrame: (a: any) => any;
 export const isFrameAligned: (a: any) => number;

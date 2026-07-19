@@ -8,12 +8,12 @@
 [1m[92m   Compiling[0m rustversion v1.0.23
 [1m[92m   Compiling[0m bumpalo v3.20.3
 [1m[92m   Compiling[0m once_cell v1.21.4
-[1m[92m   Compiling[0m wasm-bindgen v0.2.126
-[1m[92m   Compiling[0m syn v2.0.119
 [1m[92m   Compiling[0m futures-core v0.3.33
 [1m[92m   Compiling[0m futures-task v0.3.33
-[1m[92m   Compiling[0m pin-project-lite v0.2.17
+[1m[92m   Compiling[0m wasm-bindgen v0.2.126
+[1m[92m   Compiling[0m syn v2.0.119
 [1m[92m   Compiling[0m slab v0.4.12
+[1m[92m   Compiling[0m pin-project-lite v0.2.17
 [1m[92m   Compiling[0m syn v3.0.0
 [1m[92m   Compiling[0m futures-util v0.3.33
 [1m[92m   Compiling[0m cfg_aliases v0.2.2
@@ -26,45 +26,45 @@
 [1m[92m   Compiling[0m thiserror-impl v2.0.19
 [1m[92m   Compiling[0m slotmap v1.1.1
 [1m[92m   Compiling[0m naga v29.0.4
-[1m[92m   Compiling[0m equivalent v1.0.2
 [1m[92m   Compiling[0m bit-vec v0.9.1
-[1m[92m   Compiling[0m wasm-bindgen-macro-support v0.2.126
-[1m[92m   Compiling[0m foldhash v0.2.0
-[1m[92m   Compiling[0m parking_lot_core v0.9.12
 [1m[92m   Compiling[0m bitflags v2.13.1
+[1m[92m   Compiling[0m wasm-bindgen-macro-support v0.2.126
 [1m[92m   Compiling[0m hashbrown v0.17.1
-[1m[92m   Compiling[0m unicode-width v0.2.2
 [1m[92m   Compiling[0m log v0.4.33
+[1m[92m   Compiling[0m parking_lot_core v0.9.12
+[1m[92m   Compiling[0m foldhash v0.2.0
+[1m[92m   Compiling[0m equivalent v1.0.2
+[1m[92m   Compiling[0m unicode-width v0.2.2
+[1m[92m   Compiling[0m hashbrown v0.16.1
 [1m[92m   Compiling[0m codespan-reporting v0.13.1
-[1m[92m   Compiling[0m indexmap v2.14.0
 [1m[92m   Compiling[0m zerocopy-derive v0.8.54
 [1m[92m   Compiling[0m bytemuck_derive v1.11.0
-[1m[92m   Compiling[0m hashbrown v0.16.1
+[1m[92m   Compiling[0m indexmap v2.14.0
 [1m[92m   Compiling[0m bytemuck v1.25.1
 [1m[92m   Compiling[0m bit-set v0.9.1
-[1m[92m   Compiling[0m smallvec v1.15.2
 [1m[92m   Compiling[0m raw-window-handle v0.6.2
-[1m[92m   Compiling[0m hexf-parse v0.2.1
-[1m[92m   Compiling[0m arrayvec v0.7.8
+[1m[92m   Compiling[0m smallvec v1.15.2
 [1m[92m   Compiling[0m scopeguard v1.2.0
+[1m[92m   Compiling[0m arrayvec v0.7.8
+[1m[92m   Compiling[0m hexf-parse v0.2.1
 [1m[92m   Compiling[0m rustc-hash v1.1.0
 [1m[92m   Compiling[0m lock_api v0.4.14
 [1m[92m   Compiling[0m wgpu-hal v29.0.4
-[1m[92m   Compiling[0m wasm-bindgen-macro v0.2.126
 [1m[92m   Compiling[0m serde_core v1.0.229
+[1m[92m   Compiling[0m wasm-bindgen-macro v0.2.126
 [1m[92m   Compiling[0m parking_lot v0.12.5
 [1m[92m   Compiling[0m profiling v1.0.18
 [1m[92m   Compiling[0m wgpu-core v29.0.4
-[1m[92m   Compiling[0m litrs v1.0.0
 [1m[92m   Compiling[0m serde v1.0.229
-[1m[92m   Compiling[0m document-features v0.2.12
+[1m[92m   Compiling[0m litrs v1.0.0
 [1m[92m   Compiling[0m js-sys v0.3.103
+[1m[92m   Compiling[0m document-features v0.2.12
 [1m[92m   Compiling[0m serde_derive v1.0.229
 [1m[92m   Compiling[0m wgpu v29.0.4
-[1m[92m   Compiling[0m half v2.7.1
 [1m[92m   Compiling[0m zmij v1.0.23
 [1m[92m   Compiling[0m static_assertions v1.1.0
 [1m[92m   Compiling[0m serde_json v1.0.150
+[1m[92m   Compiling[0m half v2.7.1
 [1m[92m   Compiling[0m itoa v1.0.18
 [1m[92m   Compiling[0m memchr v2.8.3
 [1m[92m   Compiling[0m serde_derive_internals v0.29.1
@@ -86,10 +86,10 @@
 [1m[92m   Compiling[0m masks v0.1.0 (/home/runner/work/majancut-wasm/majancut-wasm/rust/crates/masks)
 [1m[92m   Compiling[0m compositor v0.1.0 (/home/runner/work/majancut-wasm/majancut-wasm/rust/crates/compositor)
 [1m[92m   Compiling[0m opencut-wasm v0.2.10 (/home/runner/work/majancut-wasm/majancut-wasm/rust/wasm)
-[1m[92m    Finished[0m `release` profile [optimized] target(s) in 57.60s
+[1m[92m    Finished[0m `release` profile [optimized] target(s) in 56.75s
 [INFO]: ⬇️  Installing wasm-bindgen...
 [INFO]: Optimizing wasm binaries with `wasm-opt`...
 [INFO]: License key is set in Cargo.toml but no LICENSE file(s) were found; Please add the LICENSE file(s) to your project directory
-[INFO]: ✨   Done in 1m 33s
+[INFO]: ✨   Done in 1m 31s
 [INFO]: 📦   Your wasm pkg is ready to publish at /home/runner/work/majancut-wasm/majancut-wasm/rust/wasm/pkg.
 [WARN]: ⚠️   There's a newer version of wasm-pack available, the new version is: 0.15.0, you are using: 0.13.1. To update, navigate to: https://rustwasm.github.io/wasm-pack/installer/
